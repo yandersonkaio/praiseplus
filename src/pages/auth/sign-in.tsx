@@ -1,8 +1,13 @@
 import { Church } from 'lucide-react'
+import { toast } from 'sonner'
 
 import { Button } from '@/components/ui/button'
 
 export function SignIn() {
+  function handleSignIn() {
+    toast.success('Login feito com sucesso')
+  }
+
   return (
     <div className="p-4 sm:p-6">
       <div className="mx-auto flex w-full max-w-[350px] flex-col justify-center gap-6">
@@ -18,7 +23,7 @@ export function SignIn() {
             Gerencie ou participe de espaços através do painel!
           </p>
         </div>
-        <Button variant="outline" className="w-full">
+        <Button onClick={handleSignIn} variant="outline" className="w-full">
           <svg
             className="mr-2 h-4 w-4 sm:mr-5 sm:h-5 sm:w-5"
             viewBox="0 0 48 48"
