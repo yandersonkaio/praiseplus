@@ -1,6 +1,7 @@
 import {
   ChartNoAxesCombined,
   ChevronsUpDown,
+  Church,
   CreditCard,
   LayoutDashboard,
   Settings,
@@ -73,8 +74,14 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuButton className="w-full">
-                  {selectedSpace.name}
+                <SidebarMenuButton size="lg" className="w-full">
+                  <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
+                    <Church className="size-4" />
+                  </div>
+                  <div className="flex flex-col gap-0.5 leading-none">
+                    <span className="font-semibold">Praise+</span>
+                    <span className="">{selectedSpace.name}</span>
+                  </div>
                   <ChevronsUpDown className="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
@@ -87,7 +94,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <DropdownMenuItem
                     key={space.id}
                     onClick={() => setSelectedSpace(space)}
-                    className={selectedSpace.id === space.id ? 'bg-accent' : ''} // Destaca o item selecionado
+                    className={selectedSpace.id === space.id ? 'bg-accent' : ''}
                   >
                     <span>{space.name}</span>
                   </DropdownMenuItem>
