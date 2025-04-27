@@ -30,7 +30,7 @@ import {
 const items = [
   {
     title: 'Dashboard',
-    url: '/',
+    url: '/dashboard',
     icon: LayoutDashboard,
   },
   {
@@ -59,7 +59,7 @@ const user = {
   name: 'Yanderson Kaio',
   email: 'yandersonkaio@email.com',
   avatar:
-    'https://lh3.googleusercontent.com/a/ACg8ocJ5O2sWYygMJqIBRccfgiE3eZ6UHmP_Eq0hETUGLATE0fIbiQ=s96-c',
+    'https://lh3.googleusercontent.com/a/ACg8ocJp1a5PJeUoUfeq6JGxViwXZjoQ7VXEmuMhUZ6FdUAo31WC4mHnOA=s96-c',
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -108,7 +108,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu className="flex h-full flex-col justify-center p-2">
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton asChild isActive={currentPath === item.url}>
+              <SidebarMenuButton
+                asChild
+                size="lg"
+                isActive={currentPath === item.url}
+              >
                 <NavLink to={item.url}>
                   <item.icon />
                   <span>{item.title}</span>

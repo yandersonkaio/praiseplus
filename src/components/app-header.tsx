@@ -6,7 +6,7 @@ import { SidebarTrigger } from '@/components/ui/sidebar'
 import { ThemeToggle } from './theme/theme-toggle'
 
 const pageTitles: Record<string, string> = {
-  '/': 'Dashboard',
+  '/dashboard': 'Dashboard',
   '/finance': 'Finanças',
   '/membership-fee': 'Mensalidades',
   '/settings': 'Configurações',

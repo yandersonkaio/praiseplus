@@ -10,7 +10,15 @@ export function AuthLayout() {
           <span className="font-semibold">Praise+</span>
         </div>
         <footer className="text-xs sm:text-sm">
-          Copyright © {new Date().getFullYear()} Praise+
+          Copyright © {new Date().getFullYear()} Praise+ · Desenvolvido por {}
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary underline"
+          >
+            Yanderson Kaio
+          </a>
         </footer>
       </div>
       <div className="flex flex-col items-center justify-center p-4 sm:p-6">
