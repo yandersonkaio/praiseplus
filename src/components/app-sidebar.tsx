@@ -34,7 +34,7 @@ const items = [
     icon: LayoutDashboard,
   },
   {
-    title: 'Financias',
+    title: 'Controle Financeiro',
     url: '/finance',
     icon: ChartNoAxesCombined,
   },
